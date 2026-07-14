@@ -42,65 +42,83 @@ A Spring Boot application demonstrating secure authentication and authorization 
 
 ---
 
-## 📁 Project Structure
-```text src └── main ├── java │ └── com.tony.security │ ├── config │ │ └── Security Configuration │ ├── controller │ ├── dto │ ├── entity │ ├── repository │ ├── security │ │ ├── JWT Filter │ │ ├── JWT Utility │ │ └── Authentication Components │ ├── service │ └── SecurityApplication.java └── resources ``` ---
-
-
----
-
 ## 🔑 Security Features
 
-### [JWT Authentication](ca://s?q=Spring_Boot_JWT_authentication)
-- User login with username & password
-- JWT generation after successful authentication
-- Token validation for protected endpoints
-- Stateless session management
+### JWT Authentication
+- User authentication using username and password
+- JWT generation after successful login
+- JWT validation for protected endpoints
+- Stateless authentication (no server-side session)
 
-### [Spring Security](ca://s?q=Spring_Boot_Security_configuration)
+### Spring Security
 - Custom `SecurityFilterChain`
 - Password hashing with BCrypt
 - Authentication Manager configuration
-- Role-based access control
 - Protected API endpoints
+- Role-based authentication/authorization support
 
-### [User Authentication](ca://s?q=Spring_Boot_UserDetailsService)
-- Custom `UserDetailsService` implementation
-- User lookup from database
+### User Authentication
+- Custom `UserDetailsService`
+- User lookup from the database
 - Secure login process
+- Authentication handled via Spring Security
 
 ---
 
 ## 📦 Design Patterns Used
-- **[DTO Pattern](ca://s?q=Spring_Boot_DTOs_and_entities)** – Prevents exposing entities directly, ensures clean API responses.
-- **[Repository Pattern](ca://s?q=Spring_Boot_repositories)** – Abstracts database access with Spring Data JPA.
-- **[Service Layer](ca://s?q=Spring_Boot_services)** – Encapsulates business logic for clean architecture.
-- **Entity Mapping** – JPA entities with Hibernate ORM for persistence.
-- **[ModelMapper](ca://s?q=Spring_Boot_ModelMapper)** – Automatic DTO ↔ Entity conversion.
+
+### DTO Pattern
+- Prevents exposing entities directly
+- Keeps API responses clean and consistent
+- Enables request/response validation at the API layer
+
+### Repository Pattern
+- Uses Spring Data JPA repositories for persistence
+- Provides database abstraction
+- Supports standard CRUD operations
+
+### Service Layer
+- Separates business logic from controllers
+- Promotes clean architecture
+- Keeps logic reusable and maintainable
+
+### Entity Mapping
+- JPA entities persisted with Hibernate ORM
+- Defines database relationships and mappings
+
+### ModelMapper
+- Automatic Entity ↔ DTO conversion
+- Cleaner controller/service code
+- Reduced mapping boilerplate
 
 ---
 
 ## 🧪 Skills Demonstrated
-- Spring Boot Development
-- Spring Security & JWT
-- Authentication & Authorization
-- UserDetailsService Implementation
-- SecurityFilterChain Configuration
-- Password Encryption (BCrypt)
-- REST API Development
-- Spring Data JPA & Hibernate
-- Entity Relationships
-- DTO Design Pattern
-- ModelMapper Integration
-- Repository & Service Layer Architecture
-- H2 Database Configuration
-- Maven Project Management
+- Spring Boot development
+- Spring Security
+- JWT authentication and authorization
+- `UserDetailsService` implementation
+- `SecurityFilterChain` configuration
+- Password encryption (BCrypt)
+- REST API development
+- Spring Data JPA and Hibernate
+- Entity relationships
+- DTO design pattern
+- ModelMapper usage
+- Repository pattern and service-layer architecture
+- Maven project management
+- H2 database configuration
 
 ---
 
 ## ▶ Getting Started
 
-Clone the repository:
+### Clone the repository
 ```bash
 git clone https://github.com/antony-kuria/security.git
-cd security
-Run the application: ```bash ./mvnw spring-boot:run ``` Or on Windows: ```cmd mvnw.cmd spring-boot:run ``` --- ## 💾 Database The project uses an **H2 in-memory database** for development and testing. Features include: - User persistence - Spring Data JPA integration - Hibernate ORM - Easy testing without external database setup --- ## 🎯 Learning Objectives This project demonstrates my ability to: - Build secure Spring Boot applications. - Implement JWT-based authentication and authorization. - Configure Spring Security for stateless authentication. - Develop RESTful APIs using a layered architecture. - Apply DTO and ModelMapper for clean data transfer. - Design JPA entities and repositories. - Implement business logic using service classes. - Follow clean code and separation of concerns principles. --- ## 📜 License This project was developed for educational and portfolio purposes to demonstrate Java Spring Boot and Spring Security development skills.
+```
+
+### Navigate to the project directory:
+```bash
+cd security 
+```
